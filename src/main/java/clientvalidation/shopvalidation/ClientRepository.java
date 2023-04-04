@@ -1,2 +1,7 @@
-package clientvalidation.shopvalidation;public class ClientRepository {
+package clientvalidation.shopvalidation;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ClientRepository extends CrudRepository<Client, Long> {
+    boolean existsByUsername(String username);
 }
